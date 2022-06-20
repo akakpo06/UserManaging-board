@@ -13,11 +13,11 @@ function infosRecoverer() {
     let infos = userClass.getDataListFromDataCenter()
     return infos
 }
-board = recoveredInfosHandler(infosRecoverer());
+recoveredInfosHandler(infosRecoverer());
 
-function modifyInfosModal(lineid,storage) {
+function modifyInfosModal(lineid) {
     
-    let line = storage[lineid-1]
+    let line = board[lineid-1]
     document.getElementById("table-line-id").textContent = `${line.id} `;
     document.getElementById("surname").value = `${line.surname} `;
     document.getElementById("name").value = `${line.name} `;
@@ -29,8 +29,8 @@ function modifyInfosModal(lineid,storage) {
     document.getElementById("table-line-modal-container").style.display = 'flex'
     
 }
-function showInfosModal(lineid,storage) {
-    let line = storage[lineid-1]
+function showInfosModal(lineid) {
+    let line = board[lineid-1]
     document.getElementById("table-line-id").textContent = `${line.id} `;
     document.getElementById("surname").value = `${line.surname} `;
     document.getElementById("name").value = `${line.name} `;
