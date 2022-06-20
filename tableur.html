@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cb8c25bf88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/modals.css">
+    <link rel="stylesheet" href="/tableur.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    <header>
+        <div class="date-time-container">
+            <div class="date-container">
+                <span id="date" onclick="line()">08/06/2022</span>
+            </div>
+            <div class="time-container" id="time">
+                <span>08:00</span>
+            </div>
+        </div>
+        <div class="user-circle-profile-container">
+            <div class="user-circle" onclick="showModal('user-infos-modal-container')">
+                <img src="/User-Profile-PNG.png" alt="">
+            </div>
+            <div id="user-infos-modal-container">
+                <div class="user-infos-modal">
+                    <div class="close-button-container">
+                        <span onclick="closeModal('user-infos-modal-container')">X</span>
+                    </div>
+                    <div class="admin-image-container">
+                        <img src="/User-Profile-PNG.png" alt="">
+                    </div>
+                    <form>
+                        <div class="name-surname-container">
+                            <label>
+                                <span>Nom</span>
+                                <input type="text" name="" id="" placeholder="Nom"/>
+                            </label>
+                            <label>
+                                <span>Prenoms</span>
+                                <input type="text" name="" id="" placeholder="prenoms"/>
+                            </label>
+                        </div>
+                        <div class="form-line">
+                            <label>
+                                <span>Email</span>
+                                <input type="text" name="" id="" placeholder="Email"/>
+                            </label>
+                        </div>
+                        <div class="form-line">
+                            <label>
+                                <span>Mot de passe</span>
+                                <input type="text" name="" id="" placeholder="Mot de passe actuel"/>
+                            </label>
+                        </div>
+                        <div class="form-line">
+                            <label>
+                                <span>Nouveau mot de passe</span>
+                                <input type="text" name="" id="" placeholder="Nouveau mot de passe"/>
+                            </label>
+                        </div>
+                        <div class="form-line">
+                            <label>
+                                <span>Confirmer nouveau mot de passe</span>
+                                <input type="text" name="" id="" placeholder="Confirmer nouveau mot de passe"/>
+                            </label>
+                        </div>
+                        <div class="buttons-container">
+                            <button type="button">Annuler</button>
+                            <button type="button">Sauvegarder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="filter-modif-bar">
+            <div class="filter-container">
+                <div class="search-bar-container">
+                    <div class="search-bar-text">
+                        <input type="text" name="" id="" placeholder="Search">
+                    </div>
+                    <div class="search-bar-icon"></div>
+                </div>
+                <div class="sex-filter-container">
+                    <select name="" id="">
+                        <optgroup>
+                            <option value="">Sexe</option>
+                            <option value="Man">Homme</option>
+                            <option value="Woman">Femme</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="modif-container">
+                <div class="add-button-container">
+                    <button onclick="createNewLine()">+ Ajouter</button>
+                </div>
+                <div class="delete-button-container">
+                    <button>Supprimer</button>
+                </div>
+            </div>
+        </div>
+        <div class="table-list-container" id="table-list-container">
+            <div class="table-header">
+                <div class="checkbox-container">
+                    <span>#</span>
+                </div>
+                <div class="id-container">
+                    <span>id</span>
+                </div>
+                <div class="surname-container">
+                    <span>Nom</span>
+                </div>
+                <div class="name-container">
+                    <span>Prenoms</span>
+                </div>
+                <div class="birthdate-container">
+                    <span>Date de naissance</span>
+                </div>
+                <div class="Email-container">
+                    <span>Addresse Email</span>
+                </div>
+                <div class="Phone-container">
+                    <span>Phone</span>
+                </div>
+                <div class="gender-container">
+                    <span>Sexe</span>
+                </div>
+                <div class="Actions-container">
+                    <span>Actions</span>
+                </div>
+            </div>
+            <div id="table-body-container"></div>
+            <div id="table-line-modal-container">
+                <div class="tableLineModal">
+                    <div class="close-button-container">
+                        <span onclick="closeModal('table-line-modal-container')">X</span>
+                    </div>
+                    <div class="table-line-id-container">
+                        <div class="table-line-id">
+                            <span id="table-line-id">5454</span>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-row">
+                            <label>
+                                <span>Nom</span>
+                                <input type="text" name="" id="surname" placeholder="Nom" autocomplete="off"/>
+                            </label>
+                            <label>
+                                <span>Prenoms</span>
+                                <input type="text" name="" id="name" placeholder="prenoms" autocomplete="off"/>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                <span>Email</span>
+                                <input type="text" name="" id="email" placeholder="Email" autocomplete="off"/>
+                            </label>
+                            <label>
+                                <span>Numéro de téléphone</span>
+                                <input type="text" name="" id="phone" placeholder="Numéro" autocomplete="off"/>
+                            </label>
+                        </div>
+                        <div class="form-line-second-level">
+                            <label>
+                                <span>Genre</span>
+                                <select name="" id="gender" autocomplete="off">
+                                    <option value="">Veuillez choisir le genre</option>
+                                    <option value="Homme">Homme</option>
+                                    <option value="Femme">Femme</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-line-second-level">
+                            <label>
+                                <span>Date De naissance</span>
+                                <input type="text" name="" id="birthDate" placeholder="Date de naissance" autocomplete="off"/>
+                            </label>
+                        </div>
+                        <div class="text-area-container">
+                            <span>Commentaires</span>
+                            <textarea name="" id="comments" cols="30" rows="10" autocomplete="off"></textarea>
+                        </div>
+                        <div class="buttons-container" id = "buttons">
+                            <button type="button">Annuler</button>
+                            <button type="button" onclick="go()">Sauvegarder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="/date-time.js"></script>
+<script src="/modals.js"></script>
+<script src="/table-line-class.js"></script>
+<script src="/line-handler.js"></script>
+<script src="/storage-handler.js"></script>
+</html>

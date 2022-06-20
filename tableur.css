@@ -1,0 +1,118 @@
+body,
+html{
+    margin: 0px;
+}
+header{
+    width: 98%;
+    padding: 1% 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d55ff;
+}
+.date-time-container{
+    display: flex;
+    width: 15%;
+    justify-content: space-around;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.fa-solid{
+    color: #2d55ff;
+}
+.date-container,
+.time-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.user-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user-circle img {
+    width: 100%;
+}
+.filter-modif-bar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 5%;
+}
+.filter-container{
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+}
+.modif-container{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+.add-button-container{
+    margin-right: 2%;
+}
+.table-list-container{
+    margin: 0% 5%;
+    border-bottom: 2px solid #777777;
+}
+.table-header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    background-color: #2d55ff;
+}
+.table-header div{
+    border-top: 2px solid #777777;
+    border-left: 2px solid #777777;
+    padding: 0.5% 0%;
+}
+#table-body-container{
+    width: 100%;
+}
+.checkbox-container{
+    width: 30px;
+    text-align: center;
+}
+.id-container{
+    width: 70px;
+    text-align: center;
+}
+.surname-container,
+.name-container,
+.birthdate-container,
+.Email-container{
+    width: 20%;
+    text-align: center;
+}
+.Phone-container,
+.gender-container{
+    width: 8%;
+    text-align: center;
+}
+.table-line{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.table-line>div {
+    border-top: 2px solid #777777;
+    border-left: 2px solid #777777;
+    padding: 0.5% 0%;
+}
+.checked{
+    width: 300px;
+    border: 2px solid #23d7f2;
+}
+.Actions-container{
+    display: flex;
+    width: 12%;
+    justify-content: space-around;
+    border-right: 2px solid #777777;
+}
